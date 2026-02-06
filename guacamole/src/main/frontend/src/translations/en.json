@@ -339,6 +339,7 @@
         "SECTION_HEADER_EDIT_CONNECTION" : "Edit Connection",
         "SECTION_HEADER_HISTORY"         : "Usage History",
         "SECTION_HEADER_PARAMETERS"      : "Parameters",
+        "SECTION_HEADER_PARAMETERS_ADVANCED" : "Advanced Parameters",
 
         "TABLE_HEADER_HISTORY_USERNAME"   : "Username",
         "TABLE_HEADER_HISTORY_START"      : "Start Time",

@@ -48,9 +48,16 @@
     <h2 class="header">{{'MANAGE_CONNECTION.SECTION_HEADER_PARAMETERS' | translate}}</h2>
     <div class="section connection-parameters" ng-class="{loading: !parameters}">
         <guac-form namespace="getNamespace(connection.protocol)"
-                   content="protocols[connection.protocol].connectionForms"
+                   content="protocols[connection.protocol].connectionForms.filter(x=>!x.advanced)"
                    model="parameters"></guac-form>
     </div>
+    <h2 class="header" ng-if="protocols[connection.protocol].connectionForms.filter(x=>x.advanced).length>0">{{'MANAGE_CONNECTION.SECTION_HEADER_PARAMETERS_ADVANCED' | translate}} <input type="checkbox" value="chkAdvanced" /></h2>
+    <div class="section connection-parameters" ng-class="{loading: !parameters}" ng-if="protocols[connection.protocol].connectionForms.filter(x=>x.advanced).length > 0 && chkAdvanced">
+        <guac-form namespace="getNamespace(connection.protocol)"
+                   content="protocols[connection.protocol].connectionForms.filter(x=>x.advanced)"
+                   model="parameters"></guac-form>
+    </div>
+
 
     <!-- Form action buttons -->
     <management-buttons namespace="MANAGE_CONNECTION"

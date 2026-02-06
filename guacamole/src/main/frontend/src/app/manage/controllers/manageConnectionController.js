@@ -67,6 +67,17 @@ angular.module('manage').controller('manageConnectionController', ['$scope', '$i
      * @type String
      */
     var identifier = $routeParams.id;
+    
+    
+
+    /**
+     * Advanced Parameters.
+     *
+     * @type Boolean
+     */
+    $scope.chkAdvanced = false;
+    
+    
 
     /**
      * All known protocols.

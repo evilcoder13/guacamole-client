@@ -64,6 +64,7 @@
 
         {
             "name"  : "gateway",
+            "advanced": true,
             "fields" : [
                 {
                     "name"  : "gateway-hostname",
@@ -90,6 +91,7 @@
 
         {
             "name"  : "basic-parameters",
+            "advanced": true,
             "fields" : [
                 {
                     "name"  : "initial-program",
@@ -148,6 +150,7 @@
 
         {
             "name"  : "display",
+            "advanced": true,
             "fields" : [
                 {
                     "name"  : "width",
@@ -186,6 +189,7 @@
 
         {
             "name"  : "clipboard",
+            "advanced": true,
             "fields" : [
                 {
                     "name"    : "normalize-clipboard",
@@ -212,6 +216,7 @@
 
         {
             "name"  : "device-redirection",
+            "advanced": true,
             "fields" : [
                 {
                     "name"    : "console-audio",
@@ -274,6 +279,7 @@
 
         {
             "name" : "performance",
+            "advanced": true,
             "fields" : [
                 {
                     "name"    : "enable-wallpaper",
@@ -348,6 +354,7 @@
 
         {
             "name"  : "preconnection-pdu",
+            "advanced": true,
             "fields" : [
                 {
                     "name"  : "preconnection-id",
@@ -362,6 +369,7 @@
 
         {
             "name"  : "load-balancing",
+            "advanced": true,
             "fields" : [
                 {
                     "name"  : "load-balance-info",
@@ -372,6 +380,7 @@
 
         {
             "name" : "recording",
+            "advanced": true,
             "fields" : [
                 {
                     "name"  : "recording-path",
@@ -416,6 +425,7 @@
 
         {
             "name"  : "sftp",
+            "advanced": true,
             "fields" : [
                 {
                     "name"    : "enable-sftp",
@@ -485,6 +495,7 @@
         
         {
             "name"   : "wol",
+            "advanced": true,
             "fields" : [
                 {
                     "name"    : "wol-send-packet",
