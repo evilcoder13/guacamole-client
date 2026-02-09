@@ -76,6 +76,11 @@ angular.module('manage').controller('manageConnectionController', ['$scope', '$i
      * @type Boolean
      */
     $scope.chkAdvanced = false;
+
+    $scope.isBasic = function(item) {
+        // Returns true if 'advanced' is false, null, undefined, or 0
+        return !item.advanced; 
+    };
     
     
 
