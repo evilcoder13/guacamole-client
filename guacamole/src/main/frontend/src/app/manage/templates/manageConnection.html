@@ -1,5 +1,9 @@
 
-<div class="manage-connection view" ng-class="{loading: !isLoaded()}">
+<div class="manage-connection view" ng-class="{loading: !isLoaded()}" ng-init="
+    allForms = protocols[connection.protocol].connectionForms;
+    basicForms = (allForms | filter:{ advanced: [false, null, undefined] });
+    advancedForms = (allForms | filter:{ advanced: true });
+">
 
     <!-- Main property editor -->
     <div class="header">
@@ -48,24 +52,31 @@
     <!-- Connection parameters -->
     <h2 class="header">{{'MANAGE_CONNECTION.SECTION_HEADER_PARAMETERS' | translate}}</h2>
     <div class="section connection-parameters" ng-class="{loading: !parameters}">
-        <guac-form namespace="getNamespace(connection.protocol)"
+        <!-- <guac-form namespace="getNamespace(connection.protocol)"
                 content="protocols[connection.protocol].connectionForms | filter:{ advanced: [false, null, undefined] }"
-                model="parameters"></guac-form>
+                model="parameters"></guac-form> -->
+        <guac-form
+            namespace="getNamespace(connection.protocol)"
+            content="::basicForms"
+            model="parameters">
+        </guac-form>
     </div>
 
     <!-- Advanced Section -->
-    <div ng-init="forms = protocols[connection.protocol].connectionForms">
-        <h2 class="header" ng-if="(forms | filter:{advanced: true}).length">
-            {{'MANAGE_CONNECTION.SECTION_HEADER_PARAMETERS_ADVANCED' | translate}} 
-            <input type="checkbox" ng-model="showAdvanced" />
-        </h2>
+    <h2 class="header" ng-if="advancedForms.length">
+        {{'MANAGE_CONNECTION.SECTION_HEADER_PARAMETERS_ADVANCED' | translate}}
+        <input type="checkbox" ng-model="showAdvanced" />
+    </h2>
 
-        <div class="section connection-parameters" ng-class="{loading: !parameters}" 
-            ng-if="showAdvanced && (forms | filter:{advanced: true}).length">
-            <guac-form namespace="getNamespace(connection.protocol)"
-                    content="forms | filter:{advanced: true}"
-                    model="parameters"></guac-form>
-        </div>
+
+    <div class="section connection-parameters" ng-class="{loading: !parameters}" 
+        ng-if="showAdvanced">
+        <guac-form
+            ng-if="showAdvanced"
+            namespace="getNamespace(connection.protocol)"
+            content="::advancedForms"
+            model="parameters">
+        </guac-form>
     </div>
 
 
