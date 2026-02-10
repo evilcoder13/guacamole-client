@@ -37,6 +37,11 @@ public class ProtocolInfo {
     private String name;
 
     /**
+     * The advanced form state associated with this protocol.
+     */
+    private Boolean advanced;
+
+    /**
      * A collection of forms describing all known parameters for a connection
      * using this protocol.
      */
@@ -71,6 +76,32 @@ public class ProtocolInfo {
         this.sharingProfileForms = sharingProfileForms;
     }
 
+    /**
+     * Creates a new ProtocolInfo having the given name and forms. The given
+     * collections of forms are used to describe the parameters for connections
+     * and sharing profiles respectively.
+     *
+     * @param name
+     *     The unique name associated with the protocol.
+     *
+     * @param advanced
+     *     The advanced form state associated with the protocol.
+     * 
+     * @param connectionForms
+     *     A collection of forms describing all known parameters for a
+     *     connection using this protocol.
+     *
+     * @param sharingProfileForms
+     *     A collection of forms describing all known parameters relevant to a
+     *     sharing profile whose primary connection uses this protocol.
+     */
+    public ProtocolInfo(String name, Boolean advanced, Collection<Form> connectionForms,
+            Collection<Form> sharingProfileForms) {
+        this.name = name;
+        this.advanced = advanced;
+        this.connectionForms = connectionForms;
+        this.sharingProfileForms = sharingProfileForms;
+    }
     /**
      * Creates a new ProtocolInfo with no associated name or forms.
      */
@@ -123,6 +154,26 @@ public class ProtocolInfo {
      */
     public void setName(String name) {
         this.name = name;
+    }
+
+    /**
+     * Returns the advanced state of this protocol. The protocol name is the
+     * value required by the corresponding protocol plugin for guacd.
+     *
+     * @return The advanced state of this protocol.
+     */
+    public Boolean getAdvanced() {
+        return advanced;
+    }
+
+    /**
+     * Sets the advanced state of this protocol. The protocol name is the value
+     * required by the corresponding protocol plugin for guacd.
+     *
+     * @param name The advanced state of this protocol.
+     */
+    public void setAdvanced(Boolean advanced) {
+        this.advanced = advanced;
     }
 
     /**

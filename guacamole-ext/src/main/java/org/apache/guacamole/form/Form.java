@@ -36,6 +36,7 @@ public class Form {
      */
     private String name;
 
+    private Boolean advanced;
     /**
      * All fields associated with this form.
      */
@@ -63,6 +64,25 @@ public class Form {
     public Form(String name, Collection<Field> fields) {
         this.name = name;
         this.fields = fields;
+    }
+    
+    /**
+     * Creates a new Form object having the given name and containing the given
+     * fields.
+     *
+     * @param name
+     *     A name which uniquely identifies this form.
+     *
+     * @param fields
+     *     The fields to provided within the new Form.
+     *
+     * @param advanced
+     *     If this form is advanced form.
+     */
+    public Form(String name, Collection<Field> fields, Boolean advanced) {
+        this.name = name;
+        this.fields = fields;
+        this.advanced = advanced;
     }
 
     /**
@@ -107,4 +127,24 @@ public class Form {
         this.name = name;
     }
 
+    /**
+     * Returns the name of this form. Form names must uniquely identify each
+     * form.
+     *
+     * @return
+     *     The advanced state of this form, or null if the form is basic form.
+     */
+    public Boolean getAdvanced() {
+        return advanced;
+    }
+
+    /**
+     * Sets the advanced state of this form. Form advanced is for advanced functions.
+     *
+     * @param name
+     *     The advanced state to assign to this form.
+     */
+    public void setAdvanced(Boolean advanced) {
+        this.advanced = advanced;
+    }
 }
