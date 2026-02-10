@@ -3,9 +3,3 @@ CONTRIBUTING
 doc/licenses/*/**/*
 doc/**/html/*.html
 guacamole-docker/*.pref
-src/main/webapp/custom/**
-src/main/webapp/*.json
-src/main/resources/*.json
-src/main/**
-guacamole/src/main/frontend/src/images/*.bak
-**/*.bak
