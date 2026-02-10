@@ -77,13 +77,6 @@ angular.module('manage').controller('manageConnectionController', ['$scope', '$i
      */
     $scope.chkAdvanced = false;
 
-    $scope.isBasic = function(item) {
-        // Returns true if 'advanced' is false, null, undefined, or 0
-        return !item.advanced; 
-    };
-    
-    
-
     /**
      * All known protocols.
      *
