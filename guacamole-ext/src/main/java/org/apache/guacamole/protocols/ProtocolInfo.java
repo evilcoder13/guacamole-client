@@ -170,7 +170,7 @@ public class ProtocolInfo {
      * Sets the advanced state of this protocol. The protocol name is the value
      * required by the corresponding protocol plugin for guacd.
      *
-     * @param name The advanced state of this protocol.
+     * @param advanced The advanced state of this protocol.
      */
     public void setAdvanced(Boolean advanced) {
         this.advanced = advanced;

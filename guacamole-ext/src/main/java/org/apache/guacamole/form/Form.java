@@ -141,7 +141,7 @@ public class Form {
     /**
      * Sets the advanced state of this form. Form advanced is for advanced functions.
      *
-     * @param name
+     * @param advanced
      *     The advanced state to assign to this form.
      */
     public void setAdvanced(Boolean advanced) {
