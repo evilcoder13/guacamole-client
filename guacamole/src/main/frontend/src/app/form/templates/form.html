@@ -1,7 +1,8 @@
 <div class="form-group">
     <div ng-repeat="form in forms" class="form"
          ng-class="getFormClasses(form)"
-         ng-show="containsVisible(form.fields)">
+         ng-show="containsVisible(form.fields)"
+         ng-if="(advanced && form.advanced) || (!advanced && !form.advanced)">
 
         <!-- Form name -->
         <h3 class="form-header" ng-show="form.name">{{getSectionHeader(form) | translate}}</h3>

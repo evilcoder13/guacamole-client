@@ -76,6 +76,14 @@ angular.module('form').directive('guacForm', [function form() {
             disabled : '=',
 
             /**
+             * Whether the contents of the form should be rendered as advanced.
+             * By default, form fields are enabled.
+             *
+             * @type Boolean
+             */
+            advanced : '=',
+
+            /**
              * The name of the field to be focused, if any.
              *
              * @type String
