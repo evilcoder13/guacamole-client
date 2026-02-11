@@ -69,6 +69,7 @@
 
         {
             "name"  : "clipboard",
+            "advanced" : true,
             "fields" : [
                 {
                     "name"    : "clipboard-buffer-size",
@@ -80,6 +81,7 @@
 
         {
             "name"  : "display",
+            "advanced" : true,
             "fields" : [
                 {
                     "name"  : "color-scheme",
@@ -109,6 +111,7 @@
 
         {
             "name"  : "clipboard",
+            "advanced" : true,
             "fields" : [
                 {
                     "name"    : "disable-copy",
@@ -125,6 +128,7 @@
 
         {
             "name" : "behavior",
+            "advanced" : true,
             "fields" : [
                 {
                     "name"    : "backspace",
@@ -141,6 +145,7 @@
 
         {
             "name" : "typescript",
+            "advanced" : true,
             "fields" : [
                 {
                     "name"  : "typescript-path",
@@ -165,6 +170,7 @@
 
         {
             "name" : "recording",
+            "advanced" : true,
             "fields" : [
                 {
                     "name"  : "recording-path",

@@ -52,6 +52,7 @@
 
         {
             "name"  : "display",
+            "advanced" : true,
             "fields" : [
                 {
                     "name"  : "color-scheme",
@@ -81,6 +82,7 @@
 
         {
             "name"  : "clipboard",
+            "advanced" : true,
             "fields" : [
                 {
                     "name"    : "clipboard-buffer-size",
@@ -102,6 +104,7 @@
 
         {
             "name" : "session",
+            "advanced" : true,
             "fields" : [
                 {
                     "name"  : "command",
@@ -124,6 +127,7 @@
 
         {
             "name" : "behavior",
+            "advanced" : true,
             "fields" : [
                 {
                     "name"    : "backspace",
@@ -145,6 +149,7 @@
 
         {
             "name" : "typescript",
+            "advanced" : true,
             "fields" : [
                 {
                     "name"  : "typescript-path",
@@ -169,6 +174,7 @@
 
         {
             "name" : "recording",
+            "advanced" : true,
             "fields" : [
                 {
                     "name"  : "recording-path",
@@ -233,6 +239,7 @@
         
         {
             "name"   : "wol",
+            "advanced" : true,
             "fields" : [
                 {
                     "name"    : "wol-send-packet",

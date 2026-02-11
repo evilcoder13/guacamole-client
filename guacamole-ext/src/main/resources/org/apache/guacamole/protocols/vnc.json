@@ -32,6 +32,7 @@
 
         {
             "name"  : "display",
+            "advanced" : true,
             "fields" : [
                 {
                     "name"    : "read-only",
@@ -87,6 +88,7 @@
 
         {
             "name"  : "clipboard",
+            "advanced" : true,
             "fields" : [
                 {
                     "name"    : "clipboard-buffer-size",
@@ -127,6 +129,7 @@
 
         {
             "name" : "recording",
+            "advanced" : true,
             "fields" : [
                 {
                     "name"  : "recording-path",
@@ -250,6 +253,7 @@
         
         {
             "name"   : "wol",
+            "advanced" : true,
             "fields" : [
                 {
                     "name"    : "wol-send-packet",
