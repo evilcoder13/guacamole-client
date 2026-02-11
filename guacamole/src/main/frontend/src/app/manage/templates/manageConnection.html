@@ -4,7 +4,7 @@
     basicForms = (allForms | filter:{ advanced: [false, null, undefined] });
     advancedForms = (allForms | filter:{ advanced: true });
 ">
-
+{{allForms}}
     <!-- Main property editor -->
     <div class="header">
         <h2>{{'MANAGE_CONNECTION.SECTION_HEADER_EDIT_CONNECTION' | translate}}</h2>
@@ -51,6 +51,7 @@
 
     <!-- Connection parameters -->
     <h2 class="header">{{'MANAGE_CONNECTION.SECTION_HEADER_PARAMETERS' | translate}}</h2>
+    {{basicForms}}
     <div class="section connection-parameters" ng-class="{loading: !parameters}">
         <!-- <guac-form namespace="getNamespace(connection.protocol)"
                 content="protocols[connection.protocol].connectionForms | filter:{ advanced: [false, null, undefined] }"
@@ -61,7 +62,7 @@
             model="parameters">
         </guac-form>
     </div>
-
+    {{advancedForms}}
     <!-- Advanced Section -->
     <h2 class="header" ng-if="advancedForms.length">
         {{'MANAGE_CONNECTION.SECTION_HEADER_PARAMETERS_ADVANCED' | translate}}
