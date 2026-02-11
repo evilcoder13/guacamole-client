@@ -46,5 +46,7 @@ guacamole.home=$GUACAMOLE_HOME
 EOF
 
 # Install webapp
-ln -sf /opt/guacamole/webapp/guacamole.war $CATALINA_BASE/webapps/${WEBAPP_CONTEXT:-guacamole}.war
+#ln -sf /opt/guacamole/webapp/guacamole.war $CATALINA_BASE/webapps/${WEBAPP_CONTEXT:-guacamole}.war
+# Change root path /gucamole to / by changing war filename to ROOT
+ln -sf /opt/guacamole/webapp/guacamole.war $CATALINA_BASE/webapps/${WEBAPP_CONTEXT:-ROOT}.war
 
