@@ -4,7 +4,7 @@
     
     "APP" : {
 
-        "NAME"    : "Apache Guacamole",
+        "NAME"    : "Tech42 AG System",
         "VERSION" : "${project.version}",
 
         "ACTION_ACKNOWLEDGE"        : "OK",

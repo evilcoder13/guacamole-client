@@ -92,7 +92,7 @@ angular.module('settings').provider('preferenceService', ['$injector',
         var language = (navigator.languages && navigator.languages[0])
                      || navigator.language
                      || navigator.browserLanguage
-                     || 'en';
+                     || 'vi';
 
         // Convert to format used internally
         return language.replace(/-/g, '_');
